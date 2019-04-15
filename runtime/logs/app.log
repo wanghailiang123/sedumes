@@ -1,0 +1,1309 @@
+2019-04-15 17:14:32 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][error][yii\base\ErrorException:2] yii\base\ErrorException: session_start(): open(/var/lib/php/session/sess_k75mukmbg6haee91bkii1du2j2, O_RDWR) failed: Permission denied (13) in /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php:137
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_start()...', '/data/pc/web/se...', 137, Array)
+#1 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(137): session_start()
+#2 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(612): yii\web\Session->open()
+#3 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(683): yii\web\Session->get('__id')
+#4 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(192): yii\web\User->renewAuthStatus()
+#5 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(360): yii\web\User->getIdentity()
+#6 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Component.php(139): yii\web\User->getIsGuest()
+#7 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(78): yii\base\Component->__get('isGuest')
+#8 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(384): ReflectionClass->newInstanceArgs(Array)
+#11 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#12 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#13 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(226): yii\BaseYii::createObject(Array)
+#14 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(197): yii\debug\Module->initPanels()
+#15 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#16 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(158): yii\base\BaseObject->__construct(Array)
+#17 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#18 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#19 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#20 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#21 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#22 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule('debug')
+#23 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#24 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#25 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#26 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#27 /data/pc/web/sedumes/web/index.php(11): yii\base\Application->__construct(Array)
+#28 {main}
+2019-04-15 17:14:32 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k75mukmbg6haee91bkii1du2j2'
+    '_csrf' => 'f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zgyJMCewF9TRkUTo-kUzLct3j-COwisU\";}'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=k75mukmbg6haee91bkii1du2j2; _csrf=f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zgyJMCewF9TRkUTo-kUzLct3j-COwisU%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '7113'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555319672.4101
+    'REQUEST_TIME' => 1555319672
+]
+2019-04-15 17:17:49 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][error][yii\base\ErrorException:2] yii\base\ErrorException: session_start(): open(/var/lib/php/session/sess_k75mukmbg6haee91bkii1du2j2, O_RDWR) failed: Permission denied (13) in /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php:137
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_start()...', '/data/pc/web/se...', 137, Array)
+#1 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(137): session_start()
+#2 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(612): yii\web\Session->open()
+#3 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(683): yii\web\Session->get('__id')
+#4 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(192): yii\web\User->renewAuthStatus()
+#5 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(360): yii\web\User->getIdentity()
+#6 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Component.php(139): yii\web\User->getIsGuest()
+#7 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(78): yii\base\Component->__get('isGuest')
+#8 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(384): ReflectionClass->newInstanceArgs(Array)
+#11 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#12 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#13 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(226): yii\BaseYii::createObject(Array)
+#14 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(197): yii\debug\Module->initPanels()
+#15 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#16 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(158): yii\base\BaseObject->__construct(Array)
+#17 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#18 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#19 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#20 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#21 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#22 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule('debug')
+#23 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#24 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#25 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#26 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#27 /data/pc/web/sedumes/web/index.php(11): yii\base\Application->__construct(Array)
+#28 {main}
+2019-04-15 17:17:49 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k75mukmbg6haee91bkii1du2j2'
+    '_csrf' => 'f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zgyJMCewF9TRkUTo-kUzLct3j-COwisU\";}'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=k75mukmbg6haee91bkii1du2j2; _csrf=f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zgyJMCewF9TRkUTo-kUzLct3j-COwisU%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '18491'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555319869.172
+    'REQUEST_TIME' => 1555319869
+]
+2019-04-15 17:17:51 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][error][yii\base\ErrorException:2] yii\base\ErrorException: session_start(): open(/var/lib/php/session/sess_k75mukmbg6haee91bkii1du2j2, O_RDWR) failed: Permission denied (13) in /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php:137
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_start()...', '/data/pc/web/se...', 137, Array)
+#1 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(137): session_start()
+#2 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(612): yii\web\Session->open()
+#3 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(683): yii\web\Session->get('__id')
+#4 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(192): yii\web\User->renewAuthStatus()
+#5 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(360): yii\web\User->getIdentity()
+#6 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Component.php(139): yii\web\User->getIsGuest()
+#7 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(78): yii\base\Component->__get('isGuest')
+#8 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(384): ReflectionClass->newInstanceArgs(Array)
+#11 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#12 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#13 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(226): yii\BaseYii::createObject(Array)
+#14 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(197): yii\debug\Module->initPanels()
+#15 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#16 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(158): yii\base\BaseObject->__construct(Array)
+#17 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#18 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#19 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#20 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#21 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#22 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule('debug')
+#23 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#24 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#25 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#26 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#27 /data/pc/web/sedumes/web/index.php(11): yii\base\Application->__construct(Array)
+#28 {main}
+2019-04-15 17:17:51 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k75mukmbg6haee91bkii1du2j2'
+    '_csrf' => 'f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zgyJMCewF9TRkUTo-kUzLct3j-COwisU\";}'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=k75mukmbg6haee91bkii1du2j2; _csrf=f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zgyJMCewF9TRkUTo-kUzLct3j-COwisU%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '18491'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555319871.7247
+    'REQUEST_TIME' => 1555319871
+]
+2019-04-15 17:17:54 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][error][yii\base\ErrorException:2] yii\base\ErrorException: session_start(): open(/var/lib/php/session/sess_k75mukmbg6haee91bkii1du2j2, O_RDWR) failed: Permission denied (13) in /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php:137
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_start()...', '/data/pc/web/se...', 137, Array)
+#1 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(137): session_start()
+#2 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(612): yii\web\Session->open()
+#3 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(683): yii\web\Session->get('__id')
+#4 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(192): yii\web\User->renewAuthStatus()
+#5 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(360): yii\web\User->getIdentity()
+#6 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Component.php(139): yii\web\User->getIsGuest()
+#7 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(78): yii\base\Component->__get('isGuest')
+#8 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(384): ReflectionClass->newInstanceArgs(Array)
+#11 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#12 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#13 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(226): yii\BaseYii::createObject(Array)
+#14 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(197): yii\debug\Module->initPanels()
+#15 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#16 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(158): yii\base\BaseObject->__construct(Array)
+#17 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#18 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#19 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#20 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#21 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#22 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule('debug')
+#23 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#24 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#25 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#26 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#27 /data/pc/web/sedumes/web/index.php(11): yii\base\Application->__construct(Array)
+#28 {main}
+2019-04-15 17:17:54 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k75mukmbg6haee91bkii1du2j2'
+    '_csrf' => 'f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zgyJMCewF9TRkUTo-kUzLct3j-COwisU\";}'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=k75mukmbg6haee91bkii1du2j2; _csrf=f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zgyJMCewF9TRkUTo-kUzLct3j-COwisU%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '18491'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555319874.0028
+    'REQUEST_TIME' => 1555319874
+]
+2019-04-15 17:18:09 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][error][yii\base\ErrorException:2] yii\base\ErrorException: session_start(): open(/var/lib/php/session/sess_k75mukmbg6haee91bkii1du2j2, O_RDWR) failed: Permission denied (13) in /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php:137
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_start()...', '/data/pc/web/se...', 137, Array)
+#1 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(137): session_start()
+#2 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(612): yii\web\Session->open()
+#3 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(683): yii\web\Session->get('__id')
+#4 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(192): yii\web\User->renewAuthStatus()
+#5 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(360): yii\web\User->getIdentity()
+#6 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Component.php(139): yii\web\User->getIsGuest()
+#7 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(78): yii\base\Component->__get('isGuest')
+#8 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(384): ReflectionClass->newInstanceArgs(Array)
+#11 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#12 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#13 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(226): yii\BaseYii::createObject(Array)
+#14 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(197): yii\debug\Module->initPanels()
+#15 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#16 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(158): yii\base\BaseObject->__construct(Array)
+#17 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#18 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#19 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#20 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#21 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#22 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule('debug')
+#23 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#24 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#25 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#26 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#27 /data/pc/web/sedumes/web/index.php(11): yii\base\Application->__construct(Array)
+#28 {main}
+2019-04-15 17:18:09 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k75mukmbg6haee91bkii1du2j2'
+    '_csrf' => 'f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zgyJMCewF9TRkUTo-kUzLct3j-COwisU\";}'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=k75mukmbg6haee91bkii1du2j2; _csrf=f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zgyJMCewF9TRkUTo-kUzLct3j-COwisU%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '18491'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555319889.6803
+    'REQUEST_TIME' => 1555319889
+]
+2019-04-15 17:18:11 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][error][yii\base\ErrorException:2] yii\base\ErrorException: session_start(): open(/var/lib/php/session/sess_k75mukmbg6haee91bkii1du2j2, O_RDWR) failed: Permission denied (13) in /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php:137
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_start()...', '/data/pc/web/se...', 137, Array)
+#1 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(137): session_start()
+#2 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(612): yii\web\Session->open()
+#3 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(683): yii\web\Session->get('__id')
+#4 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(192): yii\web\User->renewAuthStatus()
+#5 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(360): yii\web\User->getIdentity()
+#6 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Component.php(139): yii\web\User->getIsGuest()
+#7 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(78): yii\base\Component->__get('isGuest')
+#8 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(384): ReflectionClass->newInstanceArgs(Array)
+#11 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#12 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#13 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(226): yii\BaseYii::createObject(Array)
+#14 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(197): yii\debug\Module->initPanels()
+#15 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#16 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(158): yii\base\BaseObject->__construct(Array)
+#17 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#18 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#19 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#20 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#21 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#22 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule('debug')
+#23 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#24 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#25 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#26 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#27 /data/pc/web/sedumes/web/index.php(11): yii\base\Application->__construct(Array)
+#28 {main}
+2019-04-15 17:18:11 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k75mukmbg6haee91bkii1du2j2'
+    '_csrf' => 'f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zgyJMCewF9TRkUTo-kUzLct3j-COwisU\";}'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=k75mukmbg6haee91bkii1du2j2; _csrf=f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zgyJMCewF9TRkUTo-kUzLct3j-COwisU%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '18491'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555319891.7312
+    'REQUEST_TIME' => 1555319891
+]
+2019-04-15 17:18:13 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][error][yii\base\ErrorException:2] yii\base\ErrorException: session_start(): open(/var/lib/php/session/sess_k75mukmbg6haee91bkii1du2j2, O_RDWR) failed: Permission denied (13) in /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php:137
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_start()...', '/data/pc/web/se...', 137, Array)
+#1 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(137): session_start()
+#2 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Session.php(612): yii\web\Session->open()
+#3 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(683): yii\web\Session->get('__id')
+#4 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(192): yii\web\User->renewAuthStatus()
+#5 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/User.php(360): yii\web\User->getIdentity()
+#6 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Component.php(139): yii\web\User->getIsGuest()
+#7 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(78): yii\base\Component->__get('isGuest')
+#8 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(384): ReflectionClass->newInstanceArgs(Array)
+#11 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#12 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#13 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(226): yii\BaseYii::createObject(Array)
+#14 /data/pc/web/sedumes/vendor/yiisoft/yii2-debug/src/Module.php(197): yii\debug\Module->initPanels()
+#15 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#16 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(158): yii\base\BaseObject->__construct(Array)
+#17 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#18 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#19 /data/pc/web/sedumes/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#20 /data/pc/web/sedumes/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#21 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#22 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule('debug')
+#23 /data/pc/web/sedumes/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#24 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#25 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#26 /data/pc/web/sedumes/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#27 /data/pc/web/sedumes/web/index.php(11): yii\base\Application->__construct(Array)
+#28 {main}
+2019-04-15 17:18:13 [106.38.1.118][-][k75mukmbg6haee91bkii1du2j2][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k75mukmbg6haee91bkii1du2j2'
+    '_csrf' => 'f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zgyJMCewF9TRkUTo-kUzLct3j-COwisU\";}'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=k75mukmbg6haee91bkii1du2j2; _csrf=f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zgyJMCewF9TRkUTo-kUzLct3j-COwisU%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '18491'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555319893.031
+    'REQUEST_TIME' => 1555319893
+]
+2019-04-15 17:19:55 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+    in /data/pc/web/sedumes/views/layouts/main.php:78
+    in /data/pc/web/sedumes/controllers/SiteController.php:64
+2019-04-15 17:19:55 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+2019-04-15 17:19:55 [106.38.1.118][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k75mukmbg6haee91bkii1du2j2'
+    '_csrf' => 'f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zgyJMCewF9TRkUTo-kUzLct3j-COwisU\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=k75mukmbg6haee91bkii1du2j2; _csrf=f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zgyJMCewF9TRkUTo-kUzLct3j-COwisU%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '53665'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555319995.3725
+    'REQUEST_TIME' => 1555319995
+]
+2019-04-15 17:20:10 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+    in /data/pc/web/sedumes/views/layouts/main.php:78
+    in /data/pc/web/sedumes/controllers/SiteController.php:85
+2019-04-15 17:20:10 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+2019-04-15 17:20:10 [106.38.1.118][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k75mukmbg6haee91bkii1du2j2'
+    '_csrf' => 'f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zgyJMCewF9TRkUTo-kUzLct3j-COwisU\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=k75mukmbg6haee91bkii1du2j2; _csrf=f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zgyJMCewF9TRkUTo-kUzLct3j-COwisU%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://148.70.145.65/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '53669'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555320010.4341
+    'REQUEST_TIME' => 1555320010
+]
+2019-04-15 17:20:17 [106.38.1.118][100][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+2019-04-15 17:20:17 [106.38.1.118][100][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'b6hyTywOiTzTRGKQD_oRoqVWd1Hs0mpWESDe3oUul5QVzwsFYU3sS5V9NsJkr0XNiD0iK6CxHmV7DZ2R8kfkwQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k75mukmbg6haee91bkii1du2j2'
+    '_csrf' => 'f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zgyJMCewF9TRkUTo-kUzLct3j-COwisU\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=k75mukmbg6haee91bkii1du2j2; _csrf=f5f3b17198aef266cec532a2ec85cda0bcc6ac59255be221000592901b30c127a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zgyJMCewF9TRkUTo-kUzLct3j-COwisU%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://148.70.145.65/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://148.70.145.65'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '53665'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '228'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555320017.6471
+    'REQUEST_TIME' => 1555320017
+]
+2019-04-15 17:20:18 [106.38.1.118][100][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+    in /data/pc/web/sedumes/views/layouts/main.php:78
+    in /data/pc/web/sedumes/controllers/SiteController.php:64
+2019-04-15 17:20:18 [106.38.1.118][100][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+2019-04-15 17:20:18 [106.38.1.118][100][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '3sbfh9pj19hg5gu5n6hnjpkpv7'
+    '_identity' => 'e2ee74e6ba70d05f6dcd16216f452d5886ed4178703363939e4f583c5f075fdca:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => 'a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=3sbfh9pj19hg5gu5n6hnjpkpv7; _identity=e2ee74e6ba70d05f6dcd16216f452d5886ed4178703363939e4f583c5f075fdca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://148.70.145.65/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '53665'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555320018.9627
+    'REQUEST_TIME' => 1555320018
+]
+2019-04-15 17:20:31 [106.38.1.118][100][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+    in /data/pc/web/sedumes/views/layouts/main.php:78
+    in /data/pc/web/sedumes/controllers/SiteController.php:126
+2019-04-15 17:20:31 [106.38.1.118][100][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+2019-04-15 17:20:31 [106.38.1.118][100][-][info][application] $_GET = [
+    'r' => 'site/about'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '3sbfh9pj19hg5gu5n6hnjpkpv7'
+    '_identity' => 'e2ee74e6ba70d05f6dcd16216f452d5886ed4178703363939e4f583c5f075fdca:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => 'a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=3sbfh9pj19hg5gu5n6hnjpkpv7; _identity=e2ee74e6ba70d05f6dcd16216f452d5886ed4178703363939e4f583c5f075fdca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://148.70.145.65/index.php'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '53665'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Fabout'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fabout'
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555320031.332
+    'REQUEST_TIME' => 1555320031
+]
+2019-04-15 17:20:34 [106.38.1.118][100][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+    in /data/pc/web/sedumes/views/layouts/main.php:78
+    in /data/pc/web/sedumes/controllers/SiteController.php:115
+2019-04-15 17:20:34 [106.38.1.118][100][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+2019-04-15 17:20:34 [106.38.1.118][100][-][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '3sbfh9pj19hg5gu5n6hnjpkpv7'
+    '_identity' => 'e2ee74e6ba70d05f6dcd16216f452d5886ed4178703363939e4f583c5f075fdca:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => 'a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+    '__captcha/site/captcha' => 'jizoki'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=3sbfh9pj19hg5gu5n6hnjpkpv7; _identity=e2ee74e6ba70d05f6dcd16216f452d5886ed4178703363939e4f583c5f075fdca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://148.70.145.65/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '53665'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555320034.101
+    'REQUEST_TIME' => 1555320034
+]
+2019-04-15 17:20:34 [106.38.1.118][100][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+2019-04-15 17:20:34 [106.38.1.118][100][-][info][application] $_GET = [
+    'r' => 'site/captcha'
+    'v' => '5cb44ce21d4911.47227372'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '3sbfh9pj19hg5gu5n6hnjpkpv7'
+    '_identity' => 'e2ee74e6ba70d05f6dcd16216f452d5886ed4178703363939e4f583c5f075fdca:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => 'a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+    '__captcha/site/captcha' => 'jizoki'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=3sbfh9pj19hg5gu5n6hnjpkpv7; _identity=e2ee74e6ba70d05f6dcd16216f452d5886ed4178703363939e4f583c5f075fdca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://148.70.145.65/index.php?r=site%2Fcontact'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '53665'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Fcaptcha&v=5cb44ce21d4911.47227372'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcaptcha&v=5cb44ce21d4911.47227372'
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555320034.2064
+    'REQUEST_TIME' => 1555320034
+]
+2019-04-15 17:20:36 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+2019-04-15 17:20:36 [106.38.1.118][-][-][info][application] $_GET = [
+    'r' => 'site/logout'
+]
+
+$_POST = [
+    '_csrf' => '2adXsBNRN0J6HILIpDJk77z9TlTE9dU2Za86MLh7RMKG0DzgWAgECjIx0PzhCxeVyYcvYaKwmkxV13tc4R0eig=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '3sbfh9pj19hg5gu5n6hnjpkpv7'
+    '_identity' => 'e2ee74e6ba70d05f6dcd16216f452d5886ed4178703363939e4f583c5f075fdca:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf' => 'a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH\";}'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => 'PHPSESSID=3sbfh9pj19hg5gu5n6hnjpkpv7; _identity=e2ee74e6ba70d05f6dcd16216f452d5886ed4178703363939e4f583c5f075fdca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf=a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://148.70.145.65/index.php?r=site%2Fcontact'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://148.70.145.65'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '98'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '53665'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogout'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '98'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogout'
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555320036.2928
+    'REQUEST_TIME' => 1555320036
+]
+2019-04-15 17:20:36 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+    in /data/pc/web/sedumes/views/layouts/main.php:78
+    in /data/pc/web/sedumes/controllers/SiteController.php:64
+2019-04-15 17:20:36 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+2019-04-15 17:20:36 [106.38.1.118][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH\";}'
+    'PHPSESSID' => '5q05fd8jva4u3knvtkdd72gvn4'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => '_csrf=a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH%22%3B%7D; PHPSESSID=5q05fd8jva4u3knvtkdd72gvn4'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://148.70.145.65/index.php?r=site%2Fcontact'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '53665'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/index.php'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555320036.3604
+    'REQUEST_TIME' => 1555320036
+]
+2019-04-15 17:23:16 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+    in /data/pc/web/sedumes/views/layouts/main.php:78
+    in /data/pc/web/sedumes/controllers/SiteController.php:64
+2019-04-15 17:23:16 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+2019-04-15 17:23:16 [106.38.1.118][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH\";}'
+    'PHPSESSID' => '5q05fd8jva4u3knvtkdd72gvn4'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => '_csrf=a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH%22%3B%7D; PHPSESSID=5q05fd8jva4u3knvtkdd72gvn4'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_PURPOSE' => 'prefetch'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '46130'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555320196.0768
+    'REQUEST_TIME' => 1555320196
+]
+2019-04-15 17:23:17 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+    in /data/pc/web/sedumes/views/layouts/main.php:78
+    in /data/pc/web/sedumes/controllers/SiteController.php:64
+2019-04-15 17:23:17 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+2019-04-15 17:23:17 [106.38.1.118][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH\";}'
+    'PHPSESSID' => '5q05fd8jva4u3knvtkdd72gvn4'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => '_csrf=a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH%22%3B%7D; PHPSESSID=5q05fd8jva4u3knvtkdd72gvn4'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '46133'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555320197.1006
+    'REQUEST_TIME' => 1555320197
+]
+2019-04-15 17:23:28 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+    in /data/pc/web/sedumes/views/layouts/main.php:78
+    in /data/pc/web/sedumes/controllers/SiteController.php:64
+2019-04-15 17:23:28 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+2019-04-15 17:23:28 [106.38.1.118][-][-][info][application] $_GET = [
+    's' => '666'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH\";}'
+    'PHPSESSID' => '5q05fd8jva4u3knvtkdd72gvn4'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => '_csrf=a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH%22%3B%7D; PHPSESSID=5q05fd8jva4u3knvtkdd72gvn4'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '46133'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/666'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 's=666'
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555320208.842
+    'REQUEST_TIME' => 1555320208
+]
+2019-04-15 17:23:32 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+    in /data/pc/web/sedumes/views/layouts/main.php:78
+    in /data/pc/web/sedumes/controllers/SiteController.php:64
+2019-04-15 17:23:32 [106.38.1.118][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 106.38.1.118
+2019-04-15 17:23:32 [106.38.1.118][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH\";}'
+    'PHPSESSID' => '5q05fd8jva4u3knvtkdd72gvn4'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'nginx'
+    'HOME' => '/var/cache/nginx'
+    'HTTP_COOKIE' => '_csrf=a4620243ad1859875d58cf18517b1647ecbb68c8c7ee99c12907eee2fb20e7e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_wkPKY3HH-R4E9szuza5fEOz0xAlYfZH%22%3B%7D; PHPSESSID=5q05fd8jva4u3knvtkdd72gvn4'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '148.70.145.65'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'www.sedumes.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.27.0.2'
+    'REMOTE_PORT' => '46133'
+    'REMOTE_ADDR' => '106.38.1.118'
+    'SERVER_SOFTWARE' => 'nginx/1.14.2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/data/pc/web/sedumes/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/data/pc/web/sedumes/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1555320212.61
+    'REQUEST_TIME' => 1555320212
+]
